@@ -88,15 +88,22 @@ html {
   margin-top: 0.25rem;
 }
 
-.navigation {
+.navigation, .for-small-screens {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: firebrick;
   width: 100%;
 }
 
 nav ul {
   width: 960px;
+  padding: 0.75rem 0;
+}
+
+.for-small-screens {
+  display: none;
+
 }
 
 a {
@@ -213,3 +220,132 @@ footer h4 {
 /*footer, footer div, footer h4 {
   border: 1px solid black;
 }*/
+
+/* ---- 768px ----*/
+
+@media only screen and (max-width: 1024px) {
+
+.middle {
+  width: 100%;
+}
+
+.item {
+    width: 47%;
+  }
+
+.glasses {
+    display: none;
+  }
+
+#glasses {
+    display: none;
+  }
+
+.navigation {
+    display: none;
+  }
+
+.for-small-screens {
+    display: flex;
+    justify-content: center;
+  }
+
+nav ul {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  nav ul {
+    width: 100%;
+  }
+
+  .navigation {
+      display: none;
+  }
+
+  .for-small-screens {
+      display: flex;
+      justify-content: center;
+  }
+
+  .row {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .glasses {
+    display: none;
+  }
+
+  #glasses {
+    display: none;
+  }
+
+  #watch {
+    display: none;
+  }
+
+  .middle-container {
+    margin-top: 10rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+.middle {
+    width: 100%;
+    height: 15rem;
+    /*border: 1px solid yellow;*/
+  }
+
+  .middle-container h4 {
+    font-size: 0.77rem;
+  }
+
+  .middle-container h2 {
+    font-size: 1rem;
+  }
+
+  .navigation {
+
+  }
+
+
+/*-- main block--*/
+  .item, .row2 {
+    width: 90%;
+  }
+
+  .row2 {
+    margin: 0;
+  }
+
+  .hours {
+    margin-bottom: 4rem;
+  }
+
+  .location {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+/*-- border for main ---*/
+  /*.row2, .item, .row2 h4, .row {
+    border: 1px solid black;
+  }*/
+
+
+/* -- footer ---*/
+  footer h4 {
+    text-align: center;
+  }
+
+/*--border for heading middle block ---*/
+  /*.middle-container, .middle-container div, .middle-container h2, .middle-container h4 {
+    border: 1px solid yellow;
+  }*/
+}
